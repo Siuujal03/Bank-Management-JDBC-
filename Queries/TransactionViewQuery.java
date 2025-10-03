@@ -198,22 +198,22 @@ public class TransactionViewQuery
 
             if(choice == 2)
             {
-                System.out.println("Before " + endDate);
+                System.out.println("Transaction History Before " + endDate);
                 query += " and DATE(time) < '" + endDate + "'";
             }
             else if(choice == 3)
             {
-                System.out.println("After " + startDate);
+                System.out.println("Transaction History After " + startDate);
                 query += " and DATE(time) > '" + startDate + "'";
             }
             else if(choice == 4)
             {
-                System.out.println("Between " + startDate + " and " + endDate);
+                System.out.println("Transaction History Between " + startDate + " and " + endDate);
                 query += " and DATE(time) BETWEEN '" + startDate + "' and '" + endDate + "' ";
             }
             else if(choice == 5)
             {
-                System.out.println("Of " + startDate);
+                System.out.println("Transaction History Of " + startDate);
                 query += " and DATE(time) = '" + startDate + "'";
             }
 
@@ -239,7 +239,7 @@ public class TransactionViewQuery
         type = sc.nextInt();
 
         System.out.println();
-        System.out.print("Transaction History ");
+       // System.out.print("Transaction History ");
 
         resultSet = fetchHistory(type, accountNo);
 
