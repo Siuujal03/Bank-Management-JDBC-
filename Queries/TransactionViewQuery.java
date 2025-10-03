@@ -217,7 +217,7 @@ public class TransactionViewQuery
                 query += " and DATE(time) = '" + startDate + "'";
             }
 
-            System.out.println("Query : " + query);
+            //System.out.println("Query : " + query);
 
             return resultSet = op.selectQuery(query, connection);
 
@@ -302,8 +302,8 @@ public class TransactionViewQuery
                     System.out.println("Transfer History.");
                    System.out.print("Sender ");
                    System.out.print("Receiver ");
-                   System.out.print("Amount ");
-                   System.out.println("Time ");
+                   System.out.print("   Amount     ");
+                   System.out.println("Date ");
 
                    while(resultSet.next())
                    {
